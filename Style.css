@@ -1,0 +1,168 @@
+
+
+body {
+    background-color: #101010;
+    display: grid;
+}
+
+
+.SmartButton.Stock{
+    left: 20vw;
+    top: 10vh;
+}
+.SmartButton.Pancake {
+    left: 66vw;
+    top: 10vh;
+}
+.SmartButton.Rowly {
+    left: 20vw;
+    top: 56vh;
+}
+.SmartButton:nth-child(4) {
+    left: 66vw;
+    top: 56vh;
+}
+
+
+
+
+.SmartButton {
+    width: 180px;
+    height: 180px;
+    position: absolute;
+}
+.SmartButton * {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: absolute;
+    border-radius: 20px 20px 20px 5px;
+}
+
+
+
+
+.SmartButton .face {
+    border-radius: 20px 20px 20px 5px;
+    color: #ffffff80;
+    background: #404040;
+    padding: 10px;
+    width: 180px;
+    height: 180px;
+}
+
+.SmartButton .Pannel {
+    border-radius: 20px;
+    color: #00000000;
+    background: #ffffff90;
+    width: 0px;
+    padding: 20px;
+    top: 180px;
+    left: -15px;
+    transition: all 1s;
+}
+.SmartButton .Pannel *{
+    top: -20px;
+}
+.SmartButton:hover .Pannel *{
+    animation-name: TextHide;
+    animation-duration: 1s;
+}
+
+@keyframes TextHide{
+    0%{
+        color: #00000000;
+    }
+    70%{
+        color: #00000000;
+    }
+    100%{
+        color: #ffffff90;
+    }
+}
+
+.SmartButton:hover .Pannel{
+     left: 0px;
+     width: 200px;
+     color: #ffffff90;
+}
+
+.SmartButton:hover .Pannel:nth-child(2) {
+    top: 220px;
+}
+.SmartButton:hover .Pannel:nth-child(3) {
+    top: 280px;
+}
+.SmartButton:hover .Pannel:nth-child(4) {
+    top: 340px;
+}
+
+
+.SmartButton.Pancake:hover .Pannel{
+     animation-name: ClumpAndFlatten;
+     animation-duration: 1s;
+}
+@keyframes ClumpAndFlatten{
+    0%{
+        transform: scaleX(100%)scaleY(100%);
+    }
+    50%{
+        transform: scaleX(50%)scaleY(150%);
+    }
+    100%{
+        transform: scaleX(100%)scaleY(100%);
+    }
+}
+
+
+
+
+.SmartButton.Rowly:hover .Pannel{
+     animation-name: DelayLines;
+     animation-duration: 1s;
+}
+@keyframes DelayLines{
+    0%{
+        left: -15px;
+        width: 0px;
+    }
+    50%{
+        left: -15px;
+        width: 0px;
+    }
+    100%{
+        left: 0px;
+        width: 200px;
+    }
+}
+
+
+
+
+.SmartButton.BounceList:hover .Pannel{
+     animation-name: BounceList;
+}
+.SmartButton.BounceList:hover .Pannel:nth-child(2){
+     animation-duration: 1s;
+}
+.SmartButton.BounceList:hover .Pannel:nth-child(3){
+     animation-duration: 0.8s;
+}
+.SmartButton.BounceList:hover .Pannel:nth-child(4){
+     animation-duration: 0.6s;
+}
+@keyframes BounceList{
+    0%{
+        width: 0px;
+        top: 180px;
+    }
+    10%{
+        width: 0px;
+        top: 340px;
+    }
+    50%{
+        width: 0px;
+        top: 180px;
+    }
+    100%{
+        width: 200px;
+    }
+}
